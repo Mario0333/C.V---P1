@@ -3,7 +3,7 @@ from PIL import Image
 from utils import get_limits
 
 
-Blue = [255, 0, 0]
+Blue = [255, 0, 0]  # BGR format
 #Just for testing the camera
 cap = cv2.VideoCapture(0)
 while True:
@@ -11,7 +11,7 @@ while True:
 
     hsvImage= cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    lower_limit, upper_limit = get_limits(color=red)
+    lower_limit, upper_limit = get_limits(color=Blue)
 
     mask = cv2.inRange(hsvImage, lower_limit, upper_limit)
 
