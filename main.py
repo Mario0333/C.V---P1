@@ -3,9 +3,9 @@ from PIL import Image
 from utils import get_limits
 
 
-red = [255, 0, 0]
+Blue = [255, 0, 0]
 #Just for testing the camera
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 while True:
     ret, frame = cap.read()
 
